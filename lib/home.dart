@@ -76,20 +76,20 @@ class _HomeState extends State<Home> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             SizedBox(height: 50),
             Text(
-              'Braincore',
+              'Braincore.id',
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
             SizedBox(height: 5),
             Text(
-              'Cats and Dogs Classifier App',
+              'Cat and Dog Classifier',
               style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 30),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             ),
             SizedBox(height: 50),
             Center(
@@ -106,16 +106,22 @@ class _HomeState extends State<Home> {
                   : Container(
                       child: Column(
                         children: <Widget>[
-                          Container(
-                            height: 250,
-                            child: Image.file(_image),
+                          ClipRRect(
+                            child: Image.file(
+                              _image,
+                              height: 250,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           SizedBox(height: 20),
                           _output != null
                               ? Text(
                                   '${_output[0]['label']}',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 15),
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 )
                               : Container(),
                           SizedBox(height: 10),
@@ -142,8 +148,12 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
-                        'Capture a Photo',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        'Capture a photo',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -163,7 +173,11 @@ class _HomeState extends State<Home> {
                       ),
                       child: Text(
                         'Select a photo',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

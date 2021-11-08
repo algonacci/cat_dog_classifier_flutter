@@ -1,2 +1,2 @@
-This is a cat
-This is a dog
+This is a Cat
+This is a Dog
